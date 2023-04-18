@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Agregar desplazamiento suave a todos los enlaces internos
+            $("a").on('click', function (event) {
+
+                // Asegurarse de que this.hash tenga un valor antes de sobrescribir el comportamiento predeterminado
+                if (this.hash !== "") {
+                    // Prevenir comportamiento predeterminado del enlace
+                    event.preventDefault();
+
+                    // Almacenar hash
+                    var hash = this.hash;
+
+                    // Usar método de animación de jQuery para agregar desplazamiento suave
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Agregar hash (#) a la URL cuando haya terminado de desplazarse (comportamiento predeterminado del enlace)
+                        window.location.hash = hash;
+                    });
+                } // fin if
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="brand">
+                    <h2>G<span>R</span></h2>
+                </div>
+                <ul class="menu">
+                    <li><a class="activo" href="#">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="info-content">
+                <h1>I'm <span>Nilton </span>Guerra</h1>
+                <p>Como Frontend Developer, mi enfoque es crear experiencias web interactivas, visualmente atractivas y
+                    altamente responsivas para los usuarios. Soy experto en el uso de tecnologías web modernas, como
+                    HTML5, CSS3, JavaScript y varios frameworks y herramientas frontend, para desarrollar soluciones web
+                    de alta calidad que cumplan con los estándares de la industria.
+                </p>
+                <a download href="/pdf/CV.pdf">
+                    <button class="download-cv">Download CV</button>
+                </a>
+            </div>
+            <img src="./images/pexels-photo-1516680-removebg-preview.png" alt="Nilton Guerra picture">
+        </main>
+    </div>
+    <div class="about" id="about">
+        <img src="./images/about.png" alt="Nilton Guerra retrato">
+        <div class="about-info">
+            <h2>About me</h2>
+            <div class="divider"></div>
+            <p>Mi experiencia incluye el diseño y desarrollo de sitios web, aplicaciones web y aplicaciones móviles,
+                utilizando las últimas tecnologías y tendencias de diseño. Además, me apasiona trabajar con otros
+                profesionales, como diseñadores y desarrolladores de backend, para asegurarme de que los proyectos se
+                entreguen a tiempo y cumplan con las expectativas de los clientes.</p>
+            <p>Siendo un Frontend Developer altamente motivado y autodirigido, siempre busco aprender nuevas habilidades
+                y mejorar mi capacidad de desarrollar soluciones creativas e innovadoras. Me considero un comunicador
+                efectivo y un solucionador de problemas apasionado, capaz de trabajar en equipo y en entornos altamente
+                colaborativos.</p>
+            <button class="download-cv">Read more</button>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <div class="portfolio-headings">
+            <h2>My Portfolio</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="card_img">
+                </div>
+                <div class="card_title">
+                    <h2>Proyect Descritpion</h2>
+                </div>
+                <div class="card_proyects-links">
+                    <a href=""></a>
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+                <div class="proyect-details-content">
+                    <button class="proyects-details download-cv">
+                        <a href="/pdf/CV.pdf">
+                            Proyect details
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card_img">
+                </div>
+                <div class="card_title">
+                    <h2>Proyect Descritpion</h2>
+                </div>
+                <div class="card_proyects-links">
+                    <a href=""></a>
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+                <div class="proyect-details-content">
+                    <button class="proyects-details download-cv">
+                        <a href="/pdf/CV.pdf">
+                            Proyect details
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card_img">
+                </div>
+                <div class="card_title">
+                    <h2>Proyect Descritpion</h2>
+                </div>
+                <div class="card_proyects-links">
+                    <a href=""></a>
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+                <div class="proyect-details-content">
+                    <button class="proyects-details download-cv">
+                        <a href="/pdf/CV.pdf">
+                            Proyect details
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="contact-section" id="contact">
+        <div class="contact-headings">
+            <h2>keep in touch</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="container-contact">
+            <img src="./images/img-opacity50.png" alt="">
+            <div class="contact-form">
+                <h4>Send me a message..</h4>
+                <form class="form">
+                    <input type="text" placeholder="name"><br>
+                    <input type="email" placeholder="email"><br>
+                    <textarea placeholder="place your message here">
+                </textarea><br>
+                    <button class="btn-submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <H2>Nilton Guerra</H2>
+            <H5>Fronted Developer</H5>
+        </div>
+        <div class="sotial-network">
+            <a href="https://www.instagram.com/here_nilton____/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/nilthon.guerra.7"> <i class="fab fa-facebook-square"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=51902340266"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
